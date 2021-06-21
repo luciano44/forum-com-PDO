@@ -14,6 +14,8 @@
     <div class="header">
         <?php
         include './includes/header.php';
+        include './functions.php';
+        include './checkBan.php';
         ?>
     </div>
     <?php
@@ -58,16 +60,30 @@
                 $author = htmlspecialchars($value['author'], ENT_QUOTES);
                 $title = htmlspecialchars($value['title'], ENT_QUOTES);
                 $description = htmlspecialchars($value['description'], ENT_QUOTES);
-                echo "
-                <div class='box topic'>
-                    <span>
-                        Author: <a href='profile.php?user=".$author."'>".$author."</a>
-                    </span>
-                <br>Title: ".$title."
-                <br>Description: ".$description."
 
-                </div><br>
-                ";
+                if(!checkBan($author)){
+                    echo "
+                    <div class='box topic'>
+                        <span>
+                            Author: <a href='profile.php?user=".$author."'>".$author."</a>
+                        </span>
+                    <br>Title: ".$title."
+                    <br>Description: ".$description."<br><br>";
+                    
+                    if(isset($_SESSION['nick'])){
+                        if($_SESSION['nick'] == $author){
+                            echo "
+                                <form action='deletepost.php' method='post'>
+                                    <button type='submit' name='id' value=".$value['id'].">
+                                        Delete
+                                    </button>
+                                </form>
+                            ";
+                        }
+                        echo "</div><br>";}
+                    }
+
+                
             }
         ?>
 

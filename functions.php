@@ -17,3 +17,6 @@ function nickExists($nick){
         return false;
     }
 }
+
+
+

@@ -71,6 +71,12 @@ h3{
     box-shadow: 8px 8px 10px rgba(255,200,200,0.3);
     border: 1px solid rgba(255,200,200,0.8);
 }
+.box [type='submit']{
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+}
+
 .box.ban [type='submit']{
     background: white;
     border: 1px solid red;

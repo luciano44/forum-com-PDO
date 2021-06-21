@@ -36,6 +36,9 @@
             if(isset($_GET['banned-v'])){
                 echo '<p style="color: red;">Campo vazio.</p>';
             }
+            if(isset($_GET['ban-user-doesnt-exist'])){
+                echo '<p style="color: red;">Usuario não existe.</p>';
+            }
         ?>
         </div>
         <div class='box ban'>
@@ -53,6 +56,9 @@
             }
             if(isset($_GET['unbanned-v'])){
                 echo '<p style="color: red;">Campo vazio.</p>';
+            }
+            if(isset($_GET['unban-user-doesnt-exist'])){
+                echo '<p style="color: red;">Usuario não existe.</p>';
             }
         ?>
         </div>
