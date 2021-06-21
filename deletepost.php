@@ -1,7 +1,8 @@
 <?php
 
 include './conexao.php';
-
+ 
+$page = $_POST['page'];
 $id = $_POST['id'];
 
 $conn = getConnection();
@@ -12,7 +13,15 @@ $stmt = $conn->prepare($sql);
 
 $stmt->bindValue(1, $id);
 if($stmt->execute()){
-    header('Location: posts.php?post-deleted');
+    if(isset($_POST['user'])){
+        header($page.'?user='.$_POST['user'].'&?post-deleted');
+        die();
+    }
+    header($page.'?post-deleted');
 }else{
-    header('Location: posts.php?post-not-deleted');
+    if(isset($_POST['user'])){
+        header($page.'?user='.$_POST['user'].'&?post-not-deleted');
+        die();
+    }
+    header($page.'?post-not-deleted');
 }

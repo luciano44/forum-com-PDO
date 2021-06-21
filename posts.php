@@ -73,7 +73,8 @@
                     if(isset($_SESSION['nick'])){
                         if($_SESSION['nick'] == $author){
                             echo "
-                                <form action='deletepost.php' method='post'>
+                                <form action='deletepost.php' method='POST'>
+                                    <input type='hidden' name='page' value='Location: posts.php'>
                                     <button type='submit' name='id' value=".$value['id'].">
                                         Delete
                                     </button>
@@ -83,8 +84,7 @@
                         echo "</div><br>";}
                     }
 
-                
-            }
+                }
         ?>
 
     </div>
