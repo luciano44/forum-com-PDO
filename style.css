@@ -1,0 +1,126 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.header{
+    padding: 5px;
+    width: 100%;
+    min-height: 40px;
+    display: flex;
+    background: #feffff;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
+    border-bottom: 1px solid rgba(200,200,255,0.8);
+    box-shadow: 0 0 15px rgba(200,200,255,0.5);
+}
+a{
+    color: rgb(0, 0, 95);
+    text-decoration: none;
+    margin-left: 15px;
+}
+.box a{
+    margin-left: 5px;
+}
+p{
+    margin: 2px;
+}
+hr{
+    margin-bottom: 15px;
+}
+.header p{
+    margin-left: 30px;
+}
+.header form [type='submit']{
+    background: red;
+    border: none;
+    padding: 5px;
+    border-radius: 3px;
+}
+h3{
+    margin-bottom: 15px;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border: 1px solid rgba(200,200,255,0.8);
+    border-radius: 4px;
+    color: gray;
+    padding: 20px;
+    box-shadow: 8px 8px 10px rgba(200,200,255,0.3);
+    margin: 5px;
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+}
+.box p{
+    width: 50%;
+    color: darkgray;
+    margin: 15px auto;
+}
+.box p span{
+    color: gray;
+}
+
+.box.ban{
+    border: 1px solid red;
+    box-shadow: 8px 8px 10px rgba(255,200,200,0.3);
+    border: 1px solid rgba(255,200,200,0.8);
+}
+.box.ban [type='submit']{
+    background: white;
+    border: 1px solid red;
+    color: red;
+}
+.header [type='submit']{
+    margin: 0;
+}
+form{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+body{
+    font-family: sans-serif;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: #eeeff1;
+}
+input{
+    background: #eeeff1;
+    padding: 5px;
+    border: none;
+    border-radius: 3px;
+    margin: 3px;
+}
+[type='submit']{
+    background-color: #31aad6;
+    color: white;
+    cursor: pointer;
+    margin: 0 55px;
+}
+table{
+    border: 1px solid #eeeff1;
+}
+tr:nth-child(even){
+    background: #e0ebff;
+}
+td, th{
+    border: none;
+    padding: 5px;
+}
+td:not(td:nth-child(3)){
+    text-indent: 10px;
+    text-align: left;
+}
+th{
+    text-align: center;
+}
